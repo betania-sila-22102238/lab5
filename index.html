@@ -1,12 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Minha Página</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
-    <h1>Olá</h1>
+    <header>
+        <button id="dark-mode-button" class="light-mode">Dark-Mode</button>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre Mim</a></li>
+                <li><a href="#">Meu Curso</a></li>
+                <li><a href="#">Hobbies</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="exerciciosJavaScript.html">JavaScript Playground</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome!</h1>
+        </section>
+
+        <section class="about">
+            <article>
+                <h2>Sobre Mim</h2>
+                <p>Olá, meu nome é Betânia Silá e sou uma entusiasta da tecnologia, apaixonadoa por explorar todas as
+                    possibilidades que o mundo digital oferece.
+                    Acredito que a tecnologia tem o poder de transformar a maneira como vivemos e trabalhamos, e estou
+                    sempre em busca de aprender mais e me manter atualizada sobre as últimas tendências e novidades.
+                    Para mim, a tecnologia é muito mais do que apenas gadgets e dispositivos, é uma ferramenta poderosa
+                    para impulsionar o progresso e melhorar a vida das pessoas. Estou animada para compartilhar essa
+                    paixão com você!".
+                </p>
+                <h2>Meu Curso</h2>
+                <p>Desde sempre, a tecnologia despertou em mim uma paixão sem limites e uma curiosidade insaciável sobre
+                    como ela funciona e como pode ser usada para transformar o mundo.
+                    Acredito que a Engenharia Informática é a escolha perfeita para transformar essa paixão e
+                    curiosidade em conhecimento prático e habilidades técnicas avançadas.
+                    Quero me tornar uma engenheira informática para aprender a criar tecnologias inovadoras e
+                    usar meu conhecimento para ajudar a tornar o mundo um lugar melhor, mais conectado e mais avançado.
+                </p>
+                <h2>Hobbies</h2>
+                <p>Além de programar, sou apaixonada por viagens e pela exploração de novos lugares.
+                    Adoro conhecer outras culturas e povos, pois acredito que isso me permite compreender melhor
+                    a diversidade humana e refletir sobre a riqueza de cada um.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Betânia M. Q. Silá | a22102238 | Programação Web 2023
+        </p>
+    </footer>
+
+    <script>
+        const darkModeButton = document.querySelector('#dark-mode-button');
+
+        darkModeButton.addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+
 </body>
+
 </html>

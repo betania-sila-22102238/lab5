@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Playground</title>
+    <link rel="stylesheet" href="estilosExercicios.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <header>
+        <button id="dark-mode-button" class="light-mode">Dark-Mode</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Sobre Mim</a></li>
+                <li><a href="#">Meu Curso</a></li>
+                <li><a href="#">Hobbies</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="exerciciosJavaScript.html">JavaScriptPlayground</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="calculator-container">
+            <input type="text" id="calculator-input">
+            <button id="calculate-button">
+                <p>Calcular</p>
+            </button>
+            <button id="clear-button">Limpar</button>
+            <div id="calculator-result"></div>
+        </div>
+
+        <div>
+            <img id="inspirational-image" src="images/imagemInspiradora.jpeg" alt="inspirational image">
+            <div>
+                <label for="caption-input">Escreva uma frase inspiradora:</label>
+                <input type="text" id="caption-input" name="caption-input">
+                <button id="caption-button">Adicionar legenda</button>
+            </div>
+        </div>
+
+        <label for="name-input">Insira seu nome:</label>
+        <input type="text" id="name-input">
+
+        <p>Seu nome é: <span class="name-element">___</span></p>
+        <p>Bem-vindo, <span class="name-element">___</span>!</p>
+        <p>O nome escolhido foi: <span class="name-element">___</span></p>
+
+        <div id="date-element"></div>
+
+        <div id="hover-element">Passe o rato sobre mim</div>
+
+    </main>
+
+    <footer>
+        <p>Betânia M. Q. Silá | a22102238 | Programação Web 2023
+        </p>
+    </footer>
+
+    <script>
+        const darkModeButton = document.querySelector('#dark-mode-button');
+
+        darkModeButton.addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+
+    <script>
+        const input = document.querySelector('#calculator-input');
+        const result = document.querySelector('#calculator-result');
+        const calculateButton = document.querySelector('#calculate-button');
+        const clearButton = document.querySelector('#clear-button');
+
+        calculateButton.addEventListener('click', function () {
+            result.textContent = eval(input.value);
+        });
+
+        clearButton.addEventListener('click', function () {
+            result.textContent = '';
+        });
+
+    </script>
+
+    <script>
+        const image = document.querySelector('#inspirational-image');
+        const captionInput = document.querySelector('#caption-input');
+        const captionButton = document.querySelector('#caption-button');
+
+        captionButton.addEventListener('click', function () {
+            image.setAttribute('title', captionInput.value);
+        });
+    </script>
+
+    <script>
+        const nameInput = document.querySelector('#name-input');
+        const nameElements = document.querySelectorAll('.name-element');
+
+        nameInput.addEventListener('input', function () {
+            const name = nameInput.value;
+            nameElements.forEach(element => {
+                element.textContent = name;
+            });
+        });
+    </script>
+
+    <script>
+        const dateElement = document.querySelector('#date-element');
+        const date = new Date();
+        const options = { month: 'long', day: 'numeric', year: 'numeric' };
+        const formattedDate = date.toLocaleDateString('en-US', options);
+        dateElement.textContent = formattedDate;
+    </script>
+
+    <script>
+        const hoverElement = document.querySelector('#hover-element');
+
+        hoverElement.addEventListener('mouseover', function () {
+            hoverElement.classList.add('hovered');
+        });
+
+        hoverElement.addEventListener('mouseout', function () {
+            hoverElement.classList.remove('hovered');
+        });
+
+    </script>
+</body>
+
+</html>
