@@ -1,20 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 /* Estilo para o header */
 header {
-    background-color: purple;
+    background-color: rgb(3, 45, 65);
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-button#dark-mode-button {
-    border:purple;
+#dark-mode-button {
+    border: none;
     background-color: transparent;
     font-size: 16px;
     cursor: pointer;
+    color: white;
 }
 
-button#dark-mode-button:hover {
+#dark-mode-button:hover {
     text-decoration: underline;
 }
 
@@ -57,9 +68,54 @@ nav a:hover {
     color: #ccc;
 }
 
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+nav a:hover,
+.dropdown:hover .dropbtn {
+    background-color: burlywood;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 /* Estilo para a seção hero */
 .hero {
-    background-image: url('images/myBackground.jpeg');
+    background-image: url('images/image1.jpeg');
     background-size: cover;
     background-position: center;
     height: 600px;
@@ -73,7 +129,7 @@ nav a:hover {
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
-    color: #ccc;
+    color: black;
 }
 
 .hero p {
@@ -97,8 +153,8 @@ nav a:hover {
 
 /* Estilo para o rodapé */
 footer {
-    background-color: purple;
-    color: black;
+    background-color:  rgb(3, 45, 65);
+    color: white;
     padding: 10px;
     text-align: center;
 }

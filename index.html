@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página</title>
+    <title>Hero Page</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 
@@ -12,45 +12,68 @@
     <header>
         <button id="dark-mode-button" class="light-mode">Dark-Mode</button>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre Mim</a></li>
-                <li><a href="#">Meu Curso</a></li>
-                <li><a href="#">Hobbies</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="exerciciosJavaScript.html">JavaScript Playground</a></li>
-            </ul>
-        </nav>
+            <div class="dropdown">
+              <button class="dropbtn">
+                Dropdown
+                <br>
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">  
+                <a href="#">Home</a>
+                <a href="#sobre">Sobre Mim</a>
+                <a href="#curso">Meu Curso</a>
+                <a href="#hobbies">Hobbies</a>
+                <a href="#">Contato</a>
+                <a href="exerciciosJavaScript.html">JavaScript Playground</a>
+              </div>
+            </div>
+          </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h1>Welcome!</h1>
+            <h1>"A tecnologia move o mundo e a humanidade para frente, 
+                conectando sonhos e possibilidades em uma realidade que nunca poderíamos imaginar."</h1>
         </section>
 
         <section class="about">
             <article>
-                <h2>Sobre Mim</h2>
-                <p>Olá, meu nome é Betânia Silá e sou uma entusiasta da tecnologia, apaixonadoa por explorar todas as
-                    possibilidades que o mundo digital oferece.
-                    Acredito que a tecnologia tem o poder de transformar a maneira como vivemos e trabalhamos, e estou
-                    sempre em busca de aprender mais e me manter atualizada sobre as últimas tendências e novidades.
-                    Para mim, a tecnologia é muito mais do que apenas gadgets e dispositivos, é uma ferramenta poderosa
-                    para impulsionar o progresso e melhorar a vida das pessoas. Estou animada para compartilhar essa
-                    paixão com você!".
-                </p>
-                <h2>Meu Curso</h2>
-                <p>Desde sempre, a tecnologia despertou em mim uma paixão sem limites e uma curiosidade insaciável sobre
-                    como ela funciona e como pode ser usada para transformar o mundo.
-                    Acredito que a Engenharia Informática é a escolha perfeita para transformar essa paixão e
-                    curiosidade em conhecimento prático e habilidades técnicas avançadas.
-                    Quero me tornar uma engenheira informática para aprender a criar tecnologias inovadoras e
-                    usar meu conhecimento para ajudar a tornar o mundo um lugar melhor, mais conectado e mais avançado.
-                </p>
-                <h2>Hobbies</h2>
-                <p>Além de programar, sou apaixonada por viagens e pela exploração de novos lugares.
-                    Adoro conhecer outras culturas e povos, pois acredito que isso me permite compreender melhor
-                    a diversidade humana e refletir sobre a riqueza de cada um.</p>
+              
+                <section id="sobre">
+                    <h2>Sobre Mim</h2>
+                    <p>Olá, meu nome é Betânia Silá e sou uma entusiasta da tecnologia, apaixonadoa por explorar todas
+                        as
+                        possibilidades que o mundo digital oferece.
+                        Acredito que a tecnologia tem o poder de transformar a maneira como vivemos e trabalhamos, e
+                        estou
+                        sempre em busca de aprender mais e me manter atualizada sobre as últimas tendências e novidades.
+                        Para mim, a tecnologia é muito mais do que apenas gadgets e dispositivos, é uma ferramenta
+                        poderosa
+                        para impulsionar o progresso e melhorar a vida das pessoas. Estou animada para compartilhar essa
+                        paixão com você!
+                    </p>
+                </section>
+               
+                <section id="curso">
+                    <h2>Meu Curso</h2>
+                    <p>Desde sempre, a tecnologia despertou em mim uma paixão sem limites e uma curiosidade insaciável
+                        sobre
+                        como ela funciona e como pode ser usada para transformar o mundo.
+                        Acredito que a Engenharia Informática é a escolha perfeita para transformar essa paixão e
+                        curiosidade em conhecimento prático e habilidades técnicas avançadas.
+                        Quero me tornar uma engenheira informática para aprender a criar tecnologias inovadoras e
+                        usar meu conhecimento para ajudar a tornar o mundo um lugar melhor, mais conectado e mais
+                        avançado.
+                    </p>
+                </section>
+
+                <section id="hobbies">
+                    <h2>Hobbies</h2>
+                    <p>Além de programar, sou apaixonada por viagens e pela exploração de novos lugares.
+                        Adoro conhecer outras culturas e povos, pois acredito que isso me permite compreender melhor
+                        a diversidade humana e refletir sobre a riqueza de cada um.</p>
+
+                </section>
             </article>
         </section>
     </main>

@@ -8,6 +8,7 @@
     <title>JavaScript Playground</title>
     <link rel="stylesheet" href="estilosExercicios.css">
     <link rel="stylesheet" href="estilo.css">
+
 </head>
 
 <body>
@@ -15,14 +16,21 @@
     <header>
         <button id="dark-mode-button" class="light-mode">Dark-Mode</button>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Sobre Mim</a></li>
-                <li><a href="#">Meu Curso</a></li>
-                <li><a href="#">Hobbies</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="exerciciosJavaScript.html">JavaScriptPlayground</a></li>
-            </ul>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Dropdown
+                    <br>
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="index.html">Home</a>
+                    <a href="#sobre">Sobre Mim</a>
+                    <a href="#curso">Meu Curso</a>
+                    <a href="#hobbies">Hobbies</a>
+                    <a href="#">Contato</a>
+                    <a href="exerciciosJavaScript.html">JavaScript Playground</a>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -54,9 +62,10 @@
 
         <div id="date-element"></div>
 
-        <div id="hover-element">Passe o rato sobre mim</div>
+        <img1 src="images/myBackground.jpeg" onmouseover="this.src='https://via.placeholder.com/350x250'" onmouseout="this.src='https://via.placeholder.com/300x200'">
 
     </main>
+
 
     <footer>
         <p>Betânia M. Q. Silá | a22102238 | Programação Web 2023
@@ -112,23 +121,10 @@
     <script>
         const dateElement = document.querySelector('#date-element');
         const date = new Date();
-        const options = { month: 'long', day: 'numeric', year: 'numeric' };
-        const formattedDate = date.toLocaleDateString('en-US', options);
+        const options = { day: 'numeric', month: 'long', year: 'numeric' };
+        const formattedDate = date.toLocaleDateString('pt', options);
         dateElement.textContent = formattedDate;
     </script>
 
-    <script>
-        const hoverElement = document.querySelector('#hover-element');
-
-        hoverElement.addEventListener('mouseover', function () {
-            hoverElement.classList.add('hovered');
-        });
-
-        hoverElement.addEventListener('mouseout', function () {
-            hoverElement.classList.remove('hovered');
-        });
-
-    </script>
-</body>
-
-</html>
+    </body>
+    </html>

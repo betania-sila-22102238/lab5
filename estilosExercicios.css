@@ -78,22 +78,9 @@ button:hover {
 
 /* estilos para o elemento com o ID "date-element" */
 #date-element {
+  display: flex;
   font-size: 24px;
   font-weight: bold;
   margin-top: 50px;
-}
-
-/* estilos para o elemento com o ID "hover-element" */
-#hover-element {
-  width: 200px;
-  height: 200px;
-  background-color: purple;
-  color: white;
-  text-align: center;
-  font-size: 24px;
-}
-
-/* estilos para o elemento com a classe "hovered" quando o mouse passa por cima */
-.hovered:hover {
-  background-color: red;
+  justify-content: center;
 }
