@@ -8,33 +8,30 @@
     <title>JavaScript Playground</title>
     <link rel="stylesheet" href="estilosExercicios.css">
     <link rel="stylesheet" href="estilo.css">
-
 </head>
 
 <body>
-
     <header>
         <button id="dark-mode-button" class="light-mode">Dark-Mode</button>
         <nav>
             <div class="dropdown">
                 <button class="dropbtn">
-                    Dropdown
-                    <br>
-                    <i class="fa fa-caret-down"></i>
+                    Menu
                 </button>
                 <div class="dropdown-content">
                     <a href="index.html">Home</a>
-                    <a href="#sobre">Sobre Mim</a>
-                    <a href="#curso">Meu Curso</a>
-                    <a href="#hobbies">Hobbies</a>
-                    <a href="#">Contato</a>
-                    <a href="exerciciosJavaScript.html">JavaScript Playground</a>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
+
+        <label for="name-input">Insira seu nome:</label>
+        <input type="text" id="name-input">
+        
+        <p>Bem-vindo, <span class="name-element">___</span>!</p>
+
         <div class="calculator-container">
             <input type="text" id="calculator-input">
             <button id="calculate-button">
@@ -53,16 +50,12 @@
             </div>
         </div>
 
-        <label for="name-input">Insira seu nome:</label>
-        <input type="text" id="name-input">
-
-        <p>Seu nome é: <span class="name-element">___</span></p>
-        <p>Bem-vindo, <span class="name-element">___</span>!</p>
-        <p>O nome escolhido foi: <span class="name-element">___</span></p>
-
         <div id="date-element"></div>
 
-        <img1 src="images/myBackground.jpeg" onmouseover="this.src='https://via.placeholder.com/350x250'" onmouseout="this.src='https://via.placeholder.com/300x200'">
+        <img1 src="images/myBackground.jpeg" onmouseover="this.src='https://via.placeholder.com/350x250'"
+            onmouseout="this.src='https://via.placeholder.com/300x200'">
+
+            <p>Obrigado pela Visita: <span class="name-element">___</span></p>
 
     </main>
 
@@ -71,6 +64,7 @@
         <p>Betânia M. Q. Silá | a22102238 | Programação Web 2023
         </p>
     </footer>
+
 
     <script>
         const darkModeButton = document.querySelector('#dark-mode-button');
@@ -125,6 +119,6 @@
         const formattedDate = date.toLocaleDateString('pt', options);
         dateElement.textContent = formattedDate;
     </script>
+</body>
 
-    </body>
-    </html>
+</html>

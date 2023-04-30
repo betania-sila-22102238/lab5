@@ -45,6 +45,7 @@ button:hover {
   background-color: #0069d9;
 }
 
+
 /* estilos para o contêiner da calculadora */
 .calculator-container {
   display: flex;
@@ -84,3 +85,30 @@ button:hover {
   margin-top: 50px;
   justify-content: center;
 }
+
+#dark-mode-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+}
+
+#dark-mode-button:hover {
+  text-decoration: underline;
+}
+
+.dark-mode {
+  background-color: #282c35;
+  color: #fff;
+}
+
+.light-mode {
+  background-color: #fff;
+  color: #000;
+}
+
+

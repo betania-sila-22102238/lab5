@@ -6,39 +6,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hero Page</title>
     <link rel="stylesheet" href="estilo.css">
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+
+        /* Estilo para a seção hero */
+        .hero {
+            background-image: url('images/port2.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .hero p {
+            font-size: 50px;
+        }
+
+        /* Estilo para a seção about */
+        .about {
+            padding: 50px;
+            color: aliceblue;
+        }
+
+        .about h2 {
+            font-size: 36px;
+            color: aquamarine;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* Estilo para o rodapé */
+        footer {
+            color: #fff;
+            padding: 30px 0;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        footer a:hover {
+            color: #ffc107;
+        }
+
+        footer ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer img {
+            max-height: 60px;
+        }
+    </style>
 </head>
 
 <body>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="videos/Space Free Stock Footage.mp4" type="video/mp4">
+    </video>
+
     <header>
-        <button id="dark-mode-button" class="light-mode">Dark-Mode</button>
         <nav>
             <div class="dropdown">
-              <button class="dropbtn">
-                Dropdown
-                <br>
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">  
-                <a href="#">Home</a>
-                <a href="#sobre">Sobre Mim</a>
-                <a href="#curso">Meu Curso</a>
-                <a href="#hobbies">Hobbies</a>
-                <a href="#">Contato</a>
-                <a href="exerciciosJavaScript.html">JavaScript Playground</a>
-              </div>
+                <button class="dropbtn">Menu</button>
+                <div class="dropdown-content">
+                    <a href="#">Home</a>
+                    <a href="#sobre">Sobre Mim</a>
+                    <a href="#curso">Meu Curso</a>
+                    <a href="#">Contato</a>
+                    <a href="exerciciosJavaScript.html">JavaScript Playground</a>
+                </div>
             </div>
-          </nav>
+        </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h1>"A tecnologia move o mundo e a humanidade para frente, 
+            <h1>"A tecnologia move o mundo e a humanidade para frente,
                 conectando sonhos e possibilidades em uma realidade que nunca poderíamos imaginar."</h1>
         </section>
 
         <section class="about">
             <article>
-              
                 <section id="sobre">
                     <h2>Sobre Mim</h2>
                     <p>Olá, meu nome é Betânia Silá e sou uma entusiasta da tecnologia, apaixonadoa por explorar todas
@@ -51,9 +146,13 @@
                         poderosa
                         para impulsionar o progresso e melhorar a vida das pessoas. Estou animada para compartilhar essa
                         paixão com você!
+                    <p>Para saber mais sobre mim, visite <a href="sobre.html" style="color:lightsalmon"> minha outra
+                            página!</a>.</p>
                     </p>
                 </section>
-               
+
+                <br>
+
                 <section id="curso">
                     <h2>Meu Curso</h2>
                     <p>Desde sempre, a tecnologia despertou em mim uma paixão sem limites e uma curiosidade insaciável
@@ -63,33 +162,68 @@
                         curiosidade em conhecimento prático e habilidades técnicas avançadas.
                         Quero me tornar uma engenheira informática para aprender a criar tecnologias inovadoras e
                         usar meu conhecimento para ajudar a tornar o mundo um lugar melhor, mais conectado e mais
-                        avançado.
+                        avançado. <a href="projetos.html" style="color: lightsalmon;">Veja meus projetos!</a>
                     </p>
                 </section>
 
-                <section id="hobbies">
-                    <h2>Hobbies</h2>
-                    <p>Além de programar, sou apaixonada por viagens e pela exploração de novos lugares.
-                        Adoro conhecer outras culturas e povos, pois acredito que isso me permite compreender melhor
-                        a diversidade humana e refletir sobre a riqueza de cada um.</p>
+                <br>
 
+                <section id="Programação">
+                    <h2>Programação Web</h2>
+                    <nav>
+                        <li><a href="tecnologias.html" style="color:gray;">Tecnologias existentes</a></li>
+                        <li><a href="frontEnd.html" style="color:aliceblue">Front-end</a></li>
+                        <li><a href="backend.html" style="color: blanchedalmond;">Back-end</a></li>
+                        <li><a href="../Lab4/index.html" style="color:gray;">Laboratórios</a></li>
+                        <li><a href="noticias.html" style="color:aliceblue">Notícias</a></li>
+                    </nav>
                 </section>
+
+                <br>
+
+                <section id="sobre">
+                    <h2>Sobre Este Website</h2>
+                    <p> <a href="projetos.html" style="color: lightsalmon;">Aqui</a> você pode encontrar informações
+                        sobre as tecnologias e padrões utilizados na criação deste website.</p>
+                </section>
+
+                <br>
+
+                <section id="contact">
+                    <div class="container">
+                        <h2>Contato</h2>
+                        <p>Entre em contato comigo pelos seguintes meios:</p>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/betaniamaria/" style="color:lightsalmon;" target="_blank"><i
+                                        class="fab fa-linkedin"></i> LinkedIn</a></li>
+                            <li><a href="https://github.com/betania-sila-22102238" style="color: lightsalmon;" target="_blank"><i class="fab fa-github"></i>
+                                    GitHub</a></li>
+                            <li><a href="https://www.instagram.com/betaniamariaq/"style="color: lightsalmon;" target="_blank"><i
+                                        class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="https://www.facebook.com/betaniamariaq/" style="color: lightsalmon;" target="_blank"><i
+                                        class="fab fa-facebook" style="color: lightsalmon;"></i> Facebook</a></li>
+                        </ul>
+                        <p>Localização: Lisboa</p>
+                    </div>
+                </section>
+
+
             </article>
         </section>
     </main>
 
     <footer>
-        <p>Betânia M. Q. Silá | a22102238 | Programação Web 2023
-        </p>
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-6">
+                    <p class="text-right">Desenvolvido por <strong>Betânia Maria Queta Silá</strong> © 2023</p>
+                    <p class="text-right">Universidade Lusófona De Humanidades e Tecnologias</p>
+                    <a href="#"><img src="images/logo.png" alt="Logotipo"></a>
+                </div>
+            </div>
+        </div>
     </footer>
-
-    <script>
-        const darkModeButton = document.querySelector('#dark-mode-button');
-
-        darkModeButton.addEventListener('click', function () {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
 
 </body>
 
