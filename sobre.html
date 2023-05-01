@@ -35,7 +35,6 @@
             background-position: center;
         }
 
-
         .grid-container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -44,6 +43,15 @@
             margin: 20px auto 50px;
             min-height: 100%;
             /* adicionando margem inferior de 50px */
+        }
+
+        @media (max-width: 767px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                margin: 10px auto 30px;
+                /* reduzindo a margem inferior para 30px */
+            }
         }
 
         .grid-item {

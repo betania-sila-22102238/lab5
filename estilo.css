@@ -16,7 +16,7 @@ header {
     font-size: 16px;
     border: none;
     outline: none;
-    color: white;
+    color: rgb(21, 195, 207);
     padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
@@ -25,7 +25,7 @@ header {
 
 nav a:hover,
 .dropdown:hover .dropbtn {
-    background-color: rgb(211, 144, 56);
+    background-color: white;
 }
 
 .dropdown-content {
